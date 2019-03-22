@@ -14,7 +14,7 @@ public class IfElse {
                 test = 1;
             } 
             catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please try again or Enter -1 to exit the program.");
+                System.out.println("Invalid string input. Please try again or Enter -1 to exit the program.");
                 in.next(); /* Advancing the scanner buffer position till the delimiter position(white-space) 
                     next() can read the input only till the space(delimiter). It can’t read two words separated by space. */ 
             }
@@ -32,14 +32,12 @@ public class IfElse {
     
     public static int userErrorHandling(int num, Scanner in) {
 
-        if (num < 1) { 
-            System.out.println("Input was < 1. Please try again or Enter -1 to exit the program"); 
-        }
-        else { 
-            System.out.println("Input was > 100. Please try again or Enter -1 to exit the program");
-        }
-        num = in.nextInt();
-        exitProgram(num);
+        if (num < 1) 
+            System.out.println("Input was < 1. Please try again."); 
+        else 
+            System.out.println("Input was > 100. Please try again.");
+        //Calling below function to handle a thrown exception if user inputs string. 
+        num = exceptionHandling(num, in); 
         return num;
     }
 
