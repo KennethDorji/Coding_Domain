@@ -1,6 +1,7 @@
 # Java If-Else
 
-- Uses do while loop & 
+### The solution uses: 
+- Do while loop & 
 - A method for exception handling 
 
 ![JavaLoopsII1](https://i.imgur.com/FEfBZll.png)
