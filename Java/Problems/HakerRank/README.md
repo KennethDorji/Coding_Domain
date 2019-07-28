@@ -1,1 +1,1 @@
-# HackerRank Java Problems Solutions
+# HackerRank Java Practice Problems Solution
