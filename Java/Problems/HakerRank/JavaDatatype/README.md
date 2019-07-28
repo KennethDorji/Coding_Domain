@@ -7,12 +7,12 @@ Java has 8 primitive data types; char, boolean, byte, short, int, long, float, a
 Given an input integer, you must determine which primitive data types are capable of properly storing that input.
 To get you started, a portion of the solution is provided for you in the editor.
 Reference: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
-###Input Format
+### Input Format
 The first line contains an integer,
 , denoting the number of test cases.
 Each test case, , is comprised of a single line with an integer,
 , which can be arbitrarily large or small.
-###Output Format
+### Output Format
 For each input variable and appropriate primitive, you must determine if the given primitives are capable of storing it. 
 If yes, then print:
 ```console
@@ -23,7 +23,7 @@ If there is more than one appropriate data type, print each one on its own line 
 If the number cannot be stored in one of the four aforementioned primitives, print the line:
 n can't be fitted anywhere.
 
-###Sample Input
+### Sample Input
 ```console
 5
 -150
@@ -33,7 +33,7 @@ n can't be fitted anywhere.
 -100000000000000
 ```
 ```console
-###Sample Output
+### Sample Output
 -150 can be fitted in:
 * short
 * int
