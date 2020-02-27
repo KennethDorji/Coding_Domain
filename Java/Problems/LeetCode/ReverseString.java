@@ -1,5 +1,5 @@
 /*
-    <b/> 344. Reverse String </b>
+    344. Reverse String
     
     Write a function that reverses a string. The input string is given as an array of characters char[]. 
     
@@ -17,8 +17,6 @@
 
     Input: ["H","a","n","n","a","h"]
     Output: ["h","a","n","n","a","H"]
-
-
 */ 
 
 public class ReverseString {
