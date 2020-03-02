@@ -11,6 +11,7 @@
 
     Output: ["AAAAACCCCC", "CCCCCAAAAA"]
  */
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
