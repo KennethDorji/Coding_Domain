@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class IntersectionOfTwoArraysII {
+
+    public static int[] intersect(int[] nums1, int[] nums2) {
+
+        if (nums1.length > nums2.length)
+            return intersect(nums2, nums1);
+
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        for (int num : nums1)
+            hm.put(num, hm.getOrDefault(num, 0) + 1);
+
+        ArrayList<Integer> arrList = new ArrayList<>();
+        for (int num : nums2) {
+            int count = hm.getOrDefault(num, 0);
+            if (count > 0) {
+                arrList.add(num);
+                hm.put(num, count - 1);
+            }
+        }
+
+        int[] result = new int[arrList.size()];
+        int i = 0;
+        for (int num : arrList)
+            result[i++] = num;
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+
+        int[] nums1 = new int[] { 1, 2, 2, 1, 3 };
+        int[] nums2 = new int[] { 2, 2 };
+
+        int[] intersectionValues = new int[nums1.length < nums2.length ? nums1.length : nums2.length];
+
+        intersectionValues = intersect(nums1, nums2);
+
+        System.out.print("[");
+        for (int i = 0; i < intersectionValues.length; i++) {
+            if (i == intersectionValues.length - 1)
+                System.out.println(intersectionValues[i] + "]");
+            else
+                System.out.print(intersectionValues[i] + ",");
+
+        }
+        System.out.println();
+
+        System.exit(0);
+    }
+}
